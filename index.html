@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sawadkaari | Premium Makhana</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffefc;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      background: url('images/hero.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header .content {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .product-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .btn-outline-primary {
+      color: #4a5ef2;
+      border-color: #4a5ef2;
+    }
+    .btn-outline-primary:hover {
+      background-color: #4a5ef2;
+      color: #fff;
+    }
+    .blockquote-footer {
+      background-color: #2f2b2b;
+      padding: 10px;
+      border-radius: 8px;
+      color: #b3b3b3;
+      font-style: italic;
+    }
+    footer {
+      background: #3b2e2e;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      z-index: 999;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+      .whatsapp-float.phone {
+      background-color: #28a745;
+      bottom: 90px;
+    }
+    .product-card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+    }
+  .badge {
+    font-size: 0.8rem;
+    top: 0;
+    left: 0;
+  }
+  .badge {
+    font-size: 0.75rem;
+    top: 10px;
+    left: 10px;
+    padding: 5px 8px;
+  }
+  .badge {
+    font-size: 0.75rem;
+    top: 10px;
+    left: 10px;
+    padding: 5px 8px;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sawadkaari</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="content">
+    <h1>Welcome to Sawadkaari</h1>
+    <p>Wholesome. Crunchy. Delicious.</p>
+    <a href="#products" class="btn btn-outline-light mt-3">Shop Now</a>
+  </div>
+</header>
+
+<section id="products" class="bg-light text-center">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="row mt-4">
+
+      <!-- Classic Roasted -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card product-card h-100 position-relative animate__animated animate__shakeX">
+          <span class="badge bg-danger position-absolute m-2" style="z-index:1">BEST SELLER</span>
+          <img src="images/classic.jpeg" class="card-img-top" alt="Classic Roasted Makhana">
+          <div class="card-body">
+            <h5 class="card-title">Classic Roasted Makhana</h5>
+            <p class="card-text">Lightly salted, crispy roasted makhana – your go-to daily snack.</p>
+            <small class="text-muted d-block mb-2">Available in 50g, 100g, 200g packs</small>
+            <label for="classicQty" class="form-label text-start w-100">Select Quantity <span class="text-danger">*</span></label>
+            <select class="form-select mb-2 is-invalid" id="classicQty" required>
+  <option value="" disabled selected></option>
+  <option value="50g">50g</option>
+  <option value="100g">100g</option>
+  <option value="200g">200g</option>
+</select>
+<div class="invalid-feedback text-start fade">Please select a quantity.</div>
+            <a href="javascript:void(0)" onclick="sendOrder('Classic Roasted Makhana', document.getElementById('classicQty').value, 'classicQty')" class="btn btn-outline-primary">Buy Now on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Peri Peri -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card product-card h-100 position-relative animate__animated animate__shakeX">
+          <img src="images/peri-peri.jpeg" class="card-img-top" alt="Peri Peri Makhana">
+          <div class="card-body">
+            <h5 class="card-title">Peri Peri Makhana</h5>
+            <p class="card-text">Hot, tangy, and full of flavor – a fiery twist on healthy snacking.</p>
+            <small class="text-muted d-block mb-2">Available in 50g, 100g, 200g packs</small>
+            <label for="periQty" class="form-label text-start w-100">Select Quantity <span class="text-danger">*</span></label>
+            <select class="form-select mb-2 is-invalid" id="periQty" required>
+  <option value="" disabled selected></option>
+  <option value="50g">50g</option>
+  <option value="100g">100g</option>
+  <option value="200g">200g</option>
+</select>
+<div class="invalid-feedback text-start">Please select a quantity.</div>
+            <a href="javascript:void(0)" onclick="sendOrder('Peri Peri Makhana', document.getElementById('periQty').value, 'periQty')" class="btn btn-outline-primary">Buy Now on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Raw Makhana -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card product-card h-100 position-relative animate__animated animate__shakeX">
+          <span class="badge bg-danger position-absolute m-2" style="z-index:1">BEST SELLER</span>
+          <img src="images/Raw.jpeg" class="card-img-top" alt="Raw Makhana">
+          <div class="card-body">
+            <h5 class="card-title">Raw Makhana</h5>
+            <p class="card-text">Unroasted, natural makhana — perfect for cooking or seasoning your way.</p>
+            <small class="text-muted d-block mb-2">Available in 50g, 100g, 200g packs</small>
+            <label for="rawQty" class="form-label text-start w-100">Select Quantity <span class="text-danger">*</span></label>
+            <select class="form-select mb-2 is-invalid" id="rawQty" required>
+  <option value="" disabled selected></option>
+  <option value="50g">50g</option>
+  <option value="100g">100g</option>
+  <option value="200g">200g</option>
+</select>
+<div class="invalid-feedback text-start">Please select a quantity.</div>
+            <a href="javascript:void(0)" onclick="sendOrder('Raw Makhana', document.getElementById('rawQty').value, 'rawQty')" class="btn btn-outline-primary">Buy Now on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="text-center">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+  <img src="images/riya.jpg" class="rounded-circle mb-3 mx-auto d-block" alt="Riya Sharma" width="80" height="80">
+  <blockquote class="blockquote">
+    <p>“Best makhana I've ever tried—Crunchy, fresh & flavorful!”</p>
+    <footer class="blockquote-footer">Riya Sharma, Delhi</footer>
+  </blockquote>
+</div>
+        <div class="carousel-item text-center">
+  <img src="images/amit.jpg" class="rounded-circle mb-3 mx-auto d-block" alt="Amit Verma" width="80" height="80">
+  <blockquote class="blockquote">
+    <p>$1</p>
+    <footer class="blockquote-footer">$2</footer>
+  </blockquote>
+</div>
+        <div class="carousel-item text-center">
+  <img src="images/neha.jpg" class="rounded-circle mb-3 mx-auto d-block" alt="Neha Patel" width="80" height="80">
+  <blockquote class="blockquote">
+    <p>“Love the peri-peri flavor. Packs a punch!”</p>
+    <footer class="blockquote-footer">Neha Patel, Bangalore</footer>
+  </blockquote>
+</div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section id="shipping" class="text-center bg-light">
+  <div class="container">
+    <h2>Shipping & Delivery</h2>
+    <p>We offer fast and secure delivery across India.</p>
+    <ul class="list-unstyled">
+      <li>🚚 Free shipping on orders above ₹499</li>
+      <li>📦 Orders dispatched within 24 hours</li>
+      <li>🔒 Secure and eco-friendly packaging</li>
+    </ul>
+  </div>
+</section>
+
+<section id="newsletter" class="text-center">
+  <div class="container">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to get the latest offers, product launches, and healthy snacking tips!</p>
+    <form class="row justify-content-center">
+      <div class="col-md-6 col-sm-10">
+        <input type="email" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-success mt-2 mt-md-0">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="text-center">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>📞 <a href="https://wa.me/919910657383" target="_blank">+91 991-065-7383</a><br>
+       📧 <a href="mailto:info@sawadkaari.com">info@sawadkaari.com</a><br>
+       📍 The Spectrum Office, CW-59, Sanjay Gandhi Transport Nagar, Delhi - 110042</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Sawadkaari. All rights reserved.</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/919910657383?text=I'm%20interested%20in%20your%20Makhana%20products" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function validateQuantity(form) {
+  const select = form.previousElementSibling;
+  if (select.selectedIndex === 0) {
+    alert('Please select a quantity before proceeding.');
+    return false;
+  }
+  const quantity = select.value;
+  const baseLink = form.querySelector('input[name="waLink"]').value;
+  const message = encodeURIComponent(baseLink.includes("Classic") ?
+    `I'm interested in Classic Roasted Makhana (${quantity})` :
+    baseLink.includes("Peri") ?
+    `I'm interested in Peri Peri Makhana (${quantity})` :
+    `I'm interested in Raw Makhana (${quantity})`
+  );
+  window.open(`https://wa.me/919910657383?text=${message}`, '_blank');
+  return false;
+}
+</script>
+<a class="whatsapp-float phone" href="tel:+919910657383">
+  <i class="fas fa-phone"></i>
+</a>
+<script>
+function sendOrder(productName, quantity, selectId) {
+  const selectEl = document.getElementById(selectId);
+  selectEl.classList.remove('is-invalid');
+  const feedback = selectEl.nextElementSibling;
+  if (feedback) feedback.classList.remove('show');
+  selectEl.classList.remove('was-validated');
+  if (!quantity || quantity === 'Select Quantity') {
+    selectEl.classList.add('is-invalid');
+    const feedback = selectEl.nextElementSibling;
+    feedback.classList.add('show');
+    selectEl.classList.add('was-validated');
+    alert('Please select a quantity before placing your order.');
+    return;
+  }
+  const message = encodeURIComponent(`I'm interested in ${productName} (${quantity})`);
+  const button = event.target;
+  button.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Redirecting...';
+  button.disabled = true;
+  const whatsappURL = `https://wa.me/919910657383?text=${message}`;
+  const toast = new bootstrap.Toast(document.getElementById('successToast'));
+  toast.show();
+  setTimeout(() => {
+    window.open(whatsappURL, '_blank');
+    button.innerHTML = 'Buy Now on WhatsApp';
+    button.disabled = false;
+  }, 800);
+}
+</script>
+<div id="toast" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+  <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        WhatsApp is opening... Happy Snacking!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+</body>
